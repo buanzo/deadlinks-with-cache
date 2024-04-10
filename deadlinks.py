@@ -18,7 +18,7 @@ DEFAULT_OPTS = {
     'labels': False,
     'timeout_duration_ms': 1000,
     'timeout_is_error': False,
-    'CACHE_FILE': None,  # Cache disabled by default
+    'cache_file': None,  # Cache disabled by default
 }
 
 SPAN_WARNING = u'<span class="label label-warning"></span>'
@@ -182,7 +182,7 @@ def content_object_init(instance):
     settings = instance.settings
     siteurl = settings.get('SITEURL', '')
     opts = settings.get('DEADLINK_OPTS', DEFAULT_OPTS)
-    cache_file = opts.get('CACHE_FILE')
+    cache_file = opts.get('cache_file')
 
     if cache_file:
         initialize_cache(cache_file)
