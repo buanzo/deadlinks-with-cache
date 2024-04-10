@@ -42,6 +42,7 @@ Additionally following options might be changed:
         'labels':   True,
         'timeout_duration_ms': 1000,
         'timeout_is_error':    False,
+        'cache_file': '/path/to/cache_file.sqlite3',
     }
 ```
 
@@ -54,3 +55,4 @@ Options:
 | `labels` | Insert bootstrap's label after the anchor element | False |
 | `timeout_duration_ms` | Time in ms after which request is considered as timed out | 1000 |
 | `timeout_is_error` | True/False. When enabled every time out is considered as dead link | False |
+| `cache_file` | None or '/path/to/cache_file.sqlite3'. When set, save URL status to a cache database | None |
